@@ -5,8 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: igneus/setup-ruby@master
+      - uses: igneus/setup-ruby@bundler-cache-exclude
         with:
           ruby-version: 2.6
           bundler-cache: true
+          bundler-cache-exclude:
+            - calrom
       - run: bundle exec calrom -l
