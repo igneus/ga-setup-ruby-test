@@ -9,5 +9,4 @@ jobs:
         with:
           ruby-version: 2.6
           bundler-cache: true
-          bundler-cache-exclude: calrom
       - run: bundle exec calrom -l
